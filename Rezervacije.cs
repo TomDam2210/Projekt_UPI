@@ -128,7 +128,7 @@ namespace ProjektUpi
             if(txb_rezervacijaID.Text == "" || !IsNumber(txb_rezervacijaID.Text) || cb_gost.SelectedIndex < 0 || cb_BrojSobe.SelectedIndex < 0)
             {
                 VezaNaBazu.Close();
-                MessageBox.Show("Nisu uneseni svi podaci!\n Krivo uneseni podaci!");
+                MessageBox.Show("Nisu uneseni svi podaci.\n Krivo uneseni podaci!");
                 return;
             }
             SqlCommand cmd2 = new SqlCommand("Select * from Rezervacije_Table where RezervacijaId=@RezervacijaId", VezaNaBazu);
